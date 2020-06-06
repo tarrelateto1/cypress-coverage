@@ -1,0 +1,10 @@
+{
+    "experimentalComponentTesting": true,
+    "componentFolder": "src",
+    "testFiles":["**/*.spec.js"],
+    "baseUrl":"http://localhost:3000",
+    "reportOptions":{
+        "reportDir":"./coverage/cypress",
+        "timestamp":"mmddyyyy_HHMMss"
+    }
+}
