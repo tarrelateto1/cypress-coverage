@@ -1,6 +1,6 @@
 {
-  "/Users/tar/Desktop/cypress-coverage/src/App.js": {
-    "path": "/Users/tar/Desktop/cypress-coverage/src/App.js",
+  "/Users/tar/Desktop/cypress-coverage-react/src/App.js": {
+    "path": "/Users/tar/Desktop/cypress-coverage-react/src/App.js",
     "statementMap": {
       "0": {
         "start": {
@@ -662,65 +662,65 @@
       }
     },
     "s": {
-      "0": 6,
-      "1": 6,
-      "2": 6,
-      "3": 6,
-      "4": 6,
-      "5": 6,
-      "6": 6,
-      "7": 6,
-      "8": 6,
-      "9": 6,
-      "10": 6,
-      "11": 0,
-      "12": 0,
-      "13": 0,
-      "14": 0,
-      "15": 0,
-      "16": 0,
-      "17": 0,
-      "18": 0,
-      "19": 0,
-      "20": 0,
-      "21": 0,
-      "22": 0,
-      "23": 0,
-      "24": 0,
-      "25": 0,
-      "26": 0,
-      "27": 0,
-      "28": 0,
-      "29": 0,
-      "30": 0,
-      "31": 0,
-      "32": 0
+      "0": 32,
+      "1": 32,
+      "2": 32,
+      "3": 32,
+      "4": 32,
+      "5": 32,
+      "6": 32,
+      "7": 72,
+      "8": 72,
+      "9": 112,
+      "10": 112,
+      "11": 12,
+      "12": 12,
+      "13": 12,
+      "14": 12,
+      "15": 12,
+      "16": 10,
+      "17": 10,
+      "18": 10,
+      "19": 10,
+      "20": 10,
+      "21": 8,
+      "22": 8,
+      "23": 8,
+      "24": 8,
+      "25": 8,
+      "26": 10,
+      "27": 10,
+      "28": 10,
+      "29": 10,
+      "30": 10,
+      "31": 4,
+      "32": 6
     },
     "f": {
-      "0": 6,
-      "1": 6,
-      "2": 6,
-      "3": 6,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 0,
-      "11": 0
+      "0": 32,
+      "1": 72,
+      "2": 112,
+      "3": 112,
+      "4": 12,
+      "5": 12,
+      "6": 10,
+      "7": 10,
+      "8": 8,
+      "9": 8,
+      "10": 10,
+      "11": 10
     },
     "b": {
       "0": [
-        0,
-        0
+        4,
+        6
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "93dc6aba773df5d0e02637467f4abb40936ef418"
+    "hash": "8bbc3a1127ec1a03e16675c6758647d67ae0eca3"
   },
-  "/Users/tar/Desktop/cypress-coverage/src/index.js": {
-    "path": "/Users/tar/Desktop/cypress-coverage/src/index.js",
+  "/Users/tar/Desktop/cypress-coverage-react/src/index.js": {
+    "path": "/Users/tar/Desktop/cypress-coverage-react/src/index.js",
     "statementMap": {
       "0": {
         "start": {
@@ -736,11 +736,11 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 6
+      "0": 32
     },
     "f": {},
     "b": {},
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7dc9fa6aa3d330a85aaf278b0abc9789db2111ff"
+    "hash": "ae2cd5335402a1cf4dbc5d3962b93fee99c3d483"
   }
 }
