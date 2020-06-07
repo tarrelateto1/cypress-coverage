@@ -18,7 +18,8 @@
     "cypress": "cypress open",
     "cypress-report": "nyc npm run cypress",
     "cypress-record": "cypress run ",
-    "cypress-record-dashboard":"cypress run --record --key 24cc870e-3325-45f9-9769-7e6407354079"
+    "cypress-record-dashboard": "cypress run --record --key 24cc870e-3325-45f9-9769-7e6407354079",
+    "sonar": "sonar-scanner"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,7 +46,8 @@
     "cypress": "^4.7.0",
     "cypress-react-unit-test": "^4.4.2",
     "istanbul-lib-coverage": "^3.0.0",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "sonar-scanner": "^3.1.0"
   },
   "nyc": {
     "report-dir": "./coverage/cypress"
