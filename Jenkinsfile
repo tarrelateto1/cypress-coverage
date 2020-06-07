@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Build',
+                echo 'Build'
                 nodejs(nodeJSInstallationName: 'nodejs') {
                     sh 'npm config ls'
                 }
