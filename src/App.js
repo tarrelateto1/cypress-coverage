@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from "react-redux";
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
           <button type="button" className="multiple" onClick={ this.onMultiple }>*</button>
           <button type="button" className="divide" onClick={ this.onDivide }>/</button>
           <p className='result'>{ result }</p>
+          <h1> redux :{this.props.state}</h1>
         </form>
         </div>
     );
@@ -38,6 +40,7 @@ class App extends Component {
     this.setState({
       result: resultPlus,
     });
+    this.props.setName("Redux Tutorial")
   }
 
   plus(firstValue, secondValue) {
@@ -83,5 +86,17 @@ subtract(firstValue, secondValue){
   }
 
 }
-
-export default App;
+const mapStatetoProps = (state)=>{
+  return {state};
+}
+const mapDispatchtoProps=(dispatch)=>{
+  return {
+    setName:(name)=>{
+      dispatch({
+        type:"ADD",
+        payload:300
+      });
+    }
+  }
+}
+export default connect(mapStatetoProps,mapDispatchtoProps)(App);
