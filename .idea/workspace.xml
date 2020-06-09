@@ -56,7 +56,7 @@
       <recent name="$PROJECT_DIR$/src/views/App" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.cypress">
+  <component name="RunManager" selected="npm.start">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
