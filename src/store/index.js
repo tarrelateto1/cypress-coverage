@@ -1,10 +1,10 @@
 import {createStore,combineReducers,applyMiddleware} from "redux"
 
-import {reducer} from './reducers/index'
+import reducers from './reducers/index'
 const mylogger=(store)=>(next)=>(action)=>{
     console.log("Log Action",action);
     next(action)
 }
-const store = createStore(combineReducers({reducer}),{},applyMiddleware(mylogger));
+const store = createStore(reducers,{},applyMiddleware(mylogger));
 
 export default store;
