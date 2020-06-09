@@ -41,7 +41,7 @@ class App extends Component {
     this.setState({
       result: resultPlus,
     });
-    this.props.setName("Redux Tutorial")
+    this.props.setValue(resultPlus)
   }
 
   plus(firstValue, secondValue) {
@@ -50,10 +50,12 @@ class App extends Component {
   onSubtract(){
     const firstValue = parseInt(this.elements.firstValue.value, 10)
     const secondValue = parseInt(this.elements.secondValue.value, 10)
-    const resultPlus = this.subtract(firstValue, secondValue)
+    const resultSubtract = this.subtract(firstValue, secondValue)
     this.setState({
-      result: resultPlus,
+      result: resultSubtract,
     });
+    this.props.setValue(resultSubtract)
+
   }
 subtract(firstValue, secondValue){
   return firstValue - secondValue
@@ -61,10 +63,11 @@ subtract(firstValue, secondValue){
   onMultiple(){
     const firstValue = parseInt(this.elements.firstValue.value, 10)
     const secondValue = parseInt(this.elements.secondValue.value, 10)
-    const resultPlus = this.multiple(firstValue, secondValue)
+    const resultMultiple = this.multiple(firstValue, secondValue)
     this.setState({
-      result: resultPlus,
+      result: resultMultiple,
     });
+    this.props.setValue(resultMultiple)
   }
 
   multiple(firstValue, secondValue){
@@ -73,10 +76,12 @@ subtract(firstValue, secondValue){
   onDivide(){
     const firstValue = parseInt(this.elements.firstValue.value, 10)
     const secondValue = parseInt(this.elements.secondValue.value, 10)
-    const resultPlus = this.divide(firstValue, secondValue)
+    const resultDivide = this.divide(firstValue, secondValue)
     this.setState({
-      result: resultPlus,
+      result: resultDivide,
     });
+    this.props.setValue(resultDivide)
+
   }
   divide(firstValue, secondValue){
     if(secondValue===0){
@@ -92,8 +97,8 @@ const mapStatetoProps = (state)=>{
 }
 const mapDispatchtoProps=(dispatch)=>{
   return {
-    setName:(name)=>{
-      dispatch(setValue(200));
+    setValue:(result)=>{
+      dispatch(setValue(result));
     }
   }
 }
