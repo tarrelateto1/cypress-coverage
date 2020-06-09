@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
+import {OPERATOR} from "./store/definitions/operator";
 
 class App extends Component {
 
@@ -93,7 +94,7 @@ const mapDispatchtoProps=(dispatch)=>{
   return {
     setName:(name)=>{
       dispatch({
-        type:"ADD",
+        type:OPERATOR.add,
         payload:300
       });
     }
