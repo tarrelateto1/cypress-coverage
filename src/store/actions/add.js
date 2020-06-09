@@ -7,3 +7,7 @@ export function add(){
 export function setValue (data) {
     return {type:OPERATOR.add,result:data}
 }
+// same operation
+export const _setValue = (data) => {
+    return {type:OPERATOR.add,result:data}
+}

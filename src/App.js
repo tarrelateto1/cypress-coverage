@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {setValue} from "./store/actions/add";
+import {setValue,_setValue} from "./store/actions/add";
 
 class App extends Component {
 
@@ -98,7 +98,7 @@ const mapStatetoProps = (state)=>{
 const mapDispatchtoProps=(dispatch)=>{
   return {
     setValue:(result)=>{
-      dispatch(setValue(result));
+      dispatch(_setValue(result));
     }
   }
 }
