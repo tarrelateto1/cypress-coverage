@@ -1,4 +1,6 @@
 export const OPERATOR ={
     add:"ADD",
-    subtract:"SUBSTRACT"
+    subtract:"SUBSTRACT",
+    multiple:"MULTIPLE",
+    divide:"DIVIDE"
 }

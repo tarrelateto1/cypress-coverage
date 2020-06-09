@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {OPERATOR} from "./store/definitions/operator";
-import {add, addvalue} from "./store/actions/add";
-import mathReducer from "./store/reducers/mathReducer";
+import {setValue} from "./store/actions/add";
 
 class App extends Component {
 
@@ -95,7 +93,7 @@ const mapStatetoProps = (state)=>{
 const mapDispatchtoProps=(dispatch)=>{
   return {
     setName:(name)=>{
-      dispatch(addvalue(200));
+      dispatch(setValue(200));
     }
   }
 }

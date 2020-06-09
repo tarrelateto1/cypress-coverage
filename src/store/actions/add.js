@@ -4,6 +4,6 @@ export function add(){
     return {type:OPERATOR.add,result:500}
 }
 
-export function addvalue (data) {
+export function setValue (data) {
     return {type:OPERATOR.add,result:data}
 }

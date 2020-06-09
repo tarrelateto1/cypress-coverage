@@ -7,12 +7,22 @@ export default  (state=initialState,action)=>{
     switch(action.type){
         case OPERATOR.add:
             state={
-                result:state.result+=action.result
+                result:action.result
             }
             break;
         case OPERATOR.subtract:
-            OPERATOR.subtract={
-                result:state.result+=action.result
+            state={
+                result:action.result
+            }
+            break;
+        case OPERATOR.multiple:
+            state={
+                result:action.result
+            }
+            break;
+        case OPERATOR.divide:
+            state = {
+                result:action.result
             }
             break;
         default:
