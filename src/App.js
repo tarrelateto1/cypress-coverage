@@ -29,7 +29,7 @@ class App extends Component {
           <button type="button" className="multiple" onClick={ this.onMultiple }>*</button>
           <button type="button" className="divide" onClick={ this.onDivide }>/</button>
           <p className='result'>{ result }</p>
-          <h1> redux :{this.props.state.result}</h1>
+          <h1> redux :{this.props.state.reducer.result}</h1>
         </form>
         </div>
     );

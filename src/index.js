@@ -5,10 +5,7 @@ import App from './App';
 import {Provider} from "react-redux"
 import store from './store/index'
 import {add} from "./store/actions/add";
-// const mylogger=(store)=>(next)=>(action)=>{
-//     console.log("Log Action",action);
-//     next(action)
-// }
+
 
 
 
