@@ -4,24 +4,14 @@ import './index.css';
 import App from './App';
 import {Provider} from "react-redux"
 import {createStore} from "redux";
+import {reducer} from "./store/reducers";
 // const mylogger=(store)=>(next)=>(action)=>{
 //     console.log("Log Action",action);
 //     next(action)
 // }
-const reducer = (state,action)=>{
-    switch(action.type){
-        case "ADD":
-            state+= action.payload
-            break;
-        case "SUBTRACT":
-            state-=action.payload;
-            break;
-        default:
-    }
-    return state;
-}
 
-const store = createStore(reducer,0)
+
+const store = createStore(reducer)
 ReactDOM.render(
 <Provider store={store}>
     <App />

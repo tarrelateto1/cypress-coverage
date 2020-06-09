@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96cec03e-39a0-4764-aa3b-2efeb07d5733" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -128,28 +130,28 @@
       <screen x="0" y="23" width="1792" height="1024" />
     </state>
     <state x="264" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1792.1024@0.23.1792.1024" timestamp="1591605803215" />
-    <state width="1379" height="265" key="GridCell.Tab.0.bottom" timestamp="1591607111194">
-      <screen x="0" y="23" width="1792" height="1026" />
+    <state width="917" height="278" key="GridCell.Tab.0.bottom" timestamp="1591670775702">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
-    <state width="1140" height="265" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1591606603297" />
+    <state width="917" height="278" key="GridCell.Tab.0.bottom/0.23.1792.1024@0.23.1792.1024" timestamp="1591670775702" />
     <state width="1379" height="265" key="GridCell.Tab.0.bottom/0.23.1792.1026@0.23.1792.1026" timestamp="1591607111194" />
     <state width="1379" height="265" key="GridCell.Tab.0.bottom/0.23.1792.1028@0.23.1792.1028" timestamp="1591600492746" />
-    <state width="1379" height="265" key="GridCell.Tab.0.center" timestamp="1591607111193">
-      <screen x="0" y="23" width="1792" height="1026" />
+    <state width="917" height="278" key="GridCell.Tab.0.center" timestamp="1591670775701">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
-    <state width="1140" height="265" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1591606603296" />
+    <state width="917" height="278" key="GridCell.Tab.0.center/0.23.1792.1024@0.23.1792.1024" timestamp="1591670775701" />
     <state width="1379" height="265" key="GridCell.Tab.0.center/0.23.1792.1026@0.23.1792.1026" timestamp="1591607111193" />
     <state width="1379" height="265" key="GridCell.Tab.0.center/0.23.1792.1028@0.23.1792.1028" timestamp="1591600492745" />
-    <state width="1379" height="265" key="GridCell.Tab.0.left" timestamp="1591607111193">
-      <screen x="0" y="23" width="1792" height="1026" />
+    <state width="917" height="278" key="GridCell.Tab.0.left" timestamp="1591670775701">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
-    <state width="1140" height="265" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1591606603296" />
+    <state width="917" height="278" key="GridCell.Tab.0.left/0.23.1792.1024@0.23.1792.1024" timestamp="1591670775701" />
     <state width="1379" height="265" key="GridCell.Tab.0.left/0.23.1792.1026@0.23.1792.1026" timestamp="1591607111193" />
     <state width="1379" height="265" key="GridCell.Tab.0.left/0.23.1792.1028@0.23.1792.1028" timestamp="1591600492744" />
-    <state width="1379" height="265" key="GridCell.Tab.0.right" timestamp="1591607111193">
-      <screen x="0" y="23" width="1792" height="1026" />
+    <state width="917" height="278" key="GridCell.Tab.0.right" timestamp="1591670775702">
+      <screen x="0" y="23" width="1792" height="1024" />
     </state>
-    <state width="1140" height="265" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1591606603297" />
+    <state width="917" height="278" key="GridCell.Tab.0.right/0.23.1792.1024@0.23.1792.1024" timestamp="1591670775702" />
     <state width="1379" height="265" key="GridCell.Tab.0.right/0.23.1792.1026@0.23.1792.1026" timestamp="1591607111193" />
     <state width="1379" height="265" key="GridCell.Tab.0.right/0.23.1792.1028@0.23.1792.1028" timestamp="1591600492745" />
     <state x="201" y="239" key="search.everywhere.popup" timestamp="1591606642421">
