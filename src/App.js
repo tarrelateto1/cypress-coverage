@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from "react-redux";
 import {OPERATOR} from "./store/definitions/operator";
-import {add} from "./store/actions/add";
+import {add, addvalue} from "./store/actions/add";
 
 class App extends Component {
 
@@ -94,7 +94,7 @@ const mapStatetoProps = (state)=>{
 const mapDispatchtoProps=(dispatch)=>{
   return {
     setName:(name)=>{
-      dispatch(add());
+      dispatch(addvalue(200));
     }
   }
 }

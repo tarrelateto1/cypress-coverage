@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {Provider} from "react-redux"
-import {createStore} from "redux";
-import {reducer} from "./store/reducers";
-import {OPERATOR} from "./store/definitions/operator";
+import store from './store/index'
 import {add} from "./store/actions/add";
 // const mylogger=(store)=>(next)=>(action)=>{
 //     console.log("Log Action",action);
@@ -13,7 +11,7 @@ import {add} from "./store/actions/add";
 // }
 
 
-const store = createStore(reducer)
+
 ReactDOM.render(
 <Provider store={store}>
     <App />
