@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import {setValue,_setValue} from "./store/actions/add";
+import {bindActionCreators} from "redux";
 
 class App extends Component {
 
@@ -41,7 +42,7 @@ class App extends Component {
     this.setState({
       result: resultPlus,
     });
-    this.props.setValue(resultPlus)
+    this.props._setValue(resultPlus)
   }
 
   plus(firstValue, secondValue) {
@@ -95,11 +96,7 @@ subtract(firstValue, secondValue){
 const mapStatetoProps = (state)=>{
   return {state};
 }
-const mapDispatchtoProps=(dispatch)=>{
-  return {
-    setValue:(result)=>{
-      dispatch(_setValue(result));
-    }
-  }
-}
+const mapDispatchtoProps=(dispatch)=> bindActionCreators({
+  _setValue
+},dispatch)
 export default connect(mapStatetoProps,mapDispatchtoProps)(App);

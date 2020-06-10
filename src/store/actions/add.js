@@ -11,3 +11,4 @@ export function setValue (data) {
 export const _setValue = (data) => {
     return {type:OPERATOR.add,result:data}
 }
+
