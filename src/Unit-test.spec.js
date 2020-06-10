@@ -1,39 +1,41 @@
 /// <reference types="cypress" />
-
+// compare to App.test.js
 import React from 'react'
-import { mount } from 'cypress-react-unit-test'
 import App from './App'
-describe('Unitest', () => {
-    beforeEach("beforEach",()=>{
-        cy.visit('/')
+import { mount } from 'cypress-react-unit-test'
+import { createStore, applyMiddleware } from 'redux'
+import { createLogger } from 'redux-logger'
+import thunk from 'redux-thunk'
+import reducers from "./store/reducers";
+import { Provider } from 'react-redux'
+
+
+const middleware = [ thunk ];
+if (process.env.NODE_ENV !== 'production') {
+    // we could hook into this logger from the test
+    middleware.push(createLogger());
+}
+describe('App', () => {
+    let store
+
+    beforeEach(() => {
+        store = createStore(
+            reducers,
+            applyMiddleware(...middleware)
+        )
+
+        // note that once mounting, App starts fetching news right away
+        // so let's spy on "window.fetch" before it
+        cy.spy(window, 'fetch').as('fetch')
+
+
     })
-    it('mount contain app', () => {
-        // mount(<App />)
-        // cy.contains('Hello World!').should('be.visible')
+    it('test mount redux state',()=>{
+        mount(
+            <Provider store={store}>
+                <App />
+            </Provider>
+        )
+        cy.contains('Hello World!').should('be.visible')
     })
-  // it('unit test plue function', () => {
-  //   const calculator = new App()
-  //   const result = calculator.plus(1, 2)
-  //   expect(result).equal(3)
-  // })
-  // it('unit test subtract function', () => {
-  //   const calculator = new App()
-  //   const result = calculator.subtract(10, 2)
-  //   expect(result).equal(8)
-  // })
-  // it('unit test multiple function', () => {
-  //   const calculator = new App()
-  //   const result = calculator.multiple(10, 10)
-  //   expect(result).equal(100)
-  // })
-  // it('unit test divide function', () => {
-  //   const calculator = new App()
-  //   const result = calculator.divide(10, 2)
-  //   expect(result).equal(5)
-  // })
-  // it('unit test divide 0 function', () => {
-  //   const calculator = new App()
-  //   const result = calculator.divide(10, 0)
-  //   expect(result).equal(0)
-  // })
-})
+});
