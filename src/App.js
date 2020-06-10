@@ -55,7 +55,7 @@ class App extends Component {
     this.setState({
       result: resultSubtract,
     });
-    this.props.setValue(resultSubtract)
+    this.props._setValue(resultSubtract)
 
   }
 subtract(firstValue, secondValue){
@@ -68,7 +68,7 @@ subtract(firstValue, secondValue){
     this.setState({
       result: resultMultiple,
     });
-    this.props.setValue(resultMultiple)
+    this.props._setValue(resultMultiple)
   }
 
   multiple(firstValue, secondValue){
@@ -81,7 +81,7 @@ subtract(firstValue, secondValue){
     this.setState({
       result: resultDivide,
     });
-    this.props.setValue(resultDivide)
+    this.props._setValue(resultDivide)
 
   }
   divide(firstValue, secondValue){
