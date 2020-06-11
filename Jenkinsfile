@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Build'
                 nodejs(nodeJSInstallationName: 'nodejs') {
-                    sh 'npm config ls'
+                    sh 'npm install'
                 }
             }
         }
