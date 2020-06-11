@@ -18,16 +18,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
-                nodejs(nodeJSInstallationName: 'nodejs') {
-                    sh 'npm config ls'
-                    sh 'npm install'
-                }
+                sh 'npm config ls'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Test App.'
                 sh 'npm run cypress:ci'
+                
             }
         }
         stage('Deploy') {
