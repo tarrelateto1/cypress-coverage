@@ -18,7 +18,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
-                sh 'npm config ls'
                 sh 'npm install'
             }
         }
