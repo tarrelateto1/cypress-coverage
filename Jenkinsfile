@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Test App.',
+                echo 'Test App.'
                 sh 'npm run cypress:ci'
             }
         }
