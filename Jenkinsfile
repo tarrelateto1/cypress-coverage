@@ -1,5 +1,12 @@
 pipeline {
     agent any
+
+    tools {nodejs "node"}
+
+    environment {
+        CHROME_BIN = '/bin/google-chrome'
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -13,17 +20,19 @@ pipeline {
                 echo 'Build'
                 nodejs(nodeJSInstallationName: 'nodejs') {
                     sh 'npm config ls'
+                    sh 'npm install'
                 }
             }
         }
         stage('Test') {
             steps {
-                echo 'Test App.'
+                echo 'Test App.',
+                sh 'npm run cypress:ci'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy'
+                echo 'Deploying .....'
 
             }
         }

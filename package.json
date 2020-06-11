@@ -27,6 +27,7 @@
     "cypress-report": "nyc npm run cypress",
     "cypress-record": "cypress run ",
     "cypress-record-dashboard": "cypress run --record --key 24cc870e-3325-45f9-9769-7e6407354079",
+    "cypress:ci": "concurrently \"cypress run\" --kill-others \"npm start\" --success first",
     "sonar": "sonar-scanner"
   },
   "eslintConfig": {
@@ -51,6 +52,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "concurrently": "^5.2.0",
     "cypress": "^4.7.0",
     "cypress-react-unit-test": "^4.4.2",
     "istanbul-lib-coverage": "^3.0.0",

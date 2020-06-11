@@ -2,7 +2,7 @@
   "experimentalComponentTesting": true,
   "componentFolder": "src",
   "testFiles": [
-    "**/*.spec.js"
+    "**/*.cy-spec.js"
   ],
   "baseUrl": "http://localhost:3000",
   "reportOptions": {

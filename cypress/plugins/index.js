@@ -18,6 +18,8 @@
 module.exports = (on, config) => {
   require('@cypress/code-coverage/task',
   'cypress-react-unit-test/plugins/react-scripts')(on, config)
+  config.ignoreTestFiles = "examples/*.spec.js";
+
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
   return config
