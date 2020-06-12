@@ -18,7 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
-                sh 'npm install'
+                sh 'npm run build'
             }
         }
         stage('Test') {
@@ -31,7 +31,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying .....'
-
+                sh 'ls'
+                sh 'sshpass -p "Jirawat8" scp ./build jirawapr@172.30.120.73:/Users/jirawapr/Downloads'
+                sh 'sshpass -p Jirawat8 ssh jirawapr@172.30.120.73'
+                sh 'docker cp /Users/jirawapr/Downloads/build/. apache2:/usr/local/apache2/htdocs/'
             }
         }
     }
