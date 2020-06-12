@@ -34,7 +34,7 @@ pipeline {
                 sh 'ls'
                 sh 'zip -r build.zip build/'
                 sh 'sshpass -p "Jirawat8" scp -r ./build.zip jirawapr@172.30.120.73:/Users/jirawapr/Downloads'
-                sh 'sshpass -p Jirawat8 ssh jirawapr@172.30.120.73'
+                sh 'sshpass -p Jirawat8 ssh -tt jirawapr@172.30.120.73'
                 sh 'docker cp /Users/jirawapr/Downloads/build/build.zip apache2:/usr/local/apache2/htdocs/'
             }
         }
