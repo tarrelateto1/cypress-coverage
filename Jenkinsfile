@@ -10,7 +10,6 @@ pipeline {
         CHROME_BIN = '/bin/google-chrome'
     }
  
-
     stages {
         stage('Checkout') {
             steps {
