@@ -1,11 +1,15 @@
 pipeline {
     agent any
 
-    tools {nodejs "node"}
+    tools { 
+        nodejs "node"
+        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
+    }
 
     environment {
         CHROME_BIN = '/bin/google-chrome'
     }
+ 
 
     stages {
         stage('Checkout') {
@@ -18,6 +22,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build'
+                sh 'npm install'
                 sh 'npm run build'
             }
         }
@@ -32,9 +37,9 @@ pipeline {
             steps {
                 echo 'Deploying .....'
                 sh 'ls'
-                sh 'zip -r build.zip build/'
-                sh 'sshpass -p "Jirawat8" scp -r ./build jirawapr@172.30.120.73:/Users/jirawapr/Downloads'
-                sh 'sshpass -p Jirawat8 ssh -tt jirawapr@172.30.120.73 --session-command="docker cp /Users/jirawapr/Downloads/build/build.zip apache2:/usr/local/apache2/htdocs/"'
+                sh 'docker version'
+                sh 'docker cp ./build/. apache:/usr/local/apache2/htdocs'
+                // cmd_exec('docker cp ./build/. apache:/usr/local/apache2/htdocs')
             }
         }
     }
