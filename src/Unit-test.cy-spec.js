@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 // compare to App.test.js
 import React from 'react'
-import App from './App'
+import App from './containers/App'
 import { mount } from 'cypress-react-unit-test'
 import { createStore, applyMiddleware } from 'redux'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
-import reducers from "./store/reducers";
+import reducers from "./stores/reducers";
 import { Provider } from 'react-redux'
 
 
@@ -36,6 +36,6 @@ describe('App', () => {
                 <App />
             </Provider>
         )
-        cy.contains('Hello World!').should('be.visible')
+        cy.contains('Hello world!').should('be.visible')
     })
 });
