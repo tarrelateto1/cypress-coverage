@@ -30,12 +30,20 @@ describe('App', () => {
 
 
     })
-    it('test mount redux state',()=>{
+    it('Check Hello world!',()=>{
         mount(
             <Provider store={store}>
                 <App />
             </Provider>
         )
         cy.contains('Hello world!').should('be.visible')
+    })
+    it('check Option1',()=>{
+        mount(
+            <Provider store={store}>
+                <App />
+            </Provider>
+        )
+        cy.contains('Option 1').should('be.visible')
     })
 });
