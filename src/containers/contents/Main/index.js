@@ -30,6 +30,8 @@ class Main extends Component {
             console.log('I\'m sorry, Error......')
         })
         // api.postdata();
+        // api.putData()
+        // api.deleteData();
     }
     render() {
         const { result } = this.state
