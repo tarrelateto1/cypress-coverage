@@ -3,7 +3,7 @@ import { Layout } from "antd";
 import { bindActionCreators } from "redux";
 import { _setValue } from "../../../stores/actions/add";
 import { connect } from "react-redux";
-import axios from 'axios';
+import api from '../../../api'
 
 const { Content } = Layout;
 
@@ -22,16 +22,14 @@ class Main extends Component {
         this.onDivide = this.onDivide.bind(this);
     }
     componentDidMount() {
-        axios.get(
-            'https://csdheuzibj.execute-api.ap-southeast-1.amazonaws.com/dev/getAllPerson'
-        ).then(res => {
-
+        api.getData().then(res => {
             this.setState({
                 data: res.data
             })
         }).catch((err) => {
             console.log('I\'m sorry, Error......')
         })
+        // api.postdata();
     }
     render() {
         const { result } = this.state
