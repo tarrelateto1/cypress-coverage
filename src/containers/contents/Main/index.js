@@ -1,17 +1,19 @@
-import React, {Component} from "react"
-import {Layout} from "antd";
-import {bindActionCreators} from "redux";
-import {_setValue} from "../../../stores/actions/add";
-import {connect} from "react-redux";
+import React, { Component } from "react"
+import { Layout } from "antd";
+import { bindActionCreators } from "redux";
+import { _setValue } from "../../../stores/actions/add";
+import { connect } from "react-redux";
+import axios from 'axios';
 
-const { Content} = Layout;
+const { Content } = Layout;
 
 class Main extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             result: null,
+            data: []
         }
         this.elements = {}
         this.onPlus = this.onPlus.bind(this);
@@ -19,14 +21,27 @@ class Main extends Component {
         this.onMultiple = this.onMultiple.bind(this);
         this.onDivide = this.onDivide.bind(this);
     }
-    render(){
-        const {result} = this.state
-        return(
-            <Content style={{margin: '0 16px'}}>
+    componentDidMount() {
+        axios.get(
+            'https://csdheuzibj.execute-api.ap-southeast-1.amazonaws.com/dev/getAllPerson'
+        ).then(res => {
+
+            this.setState({
+                data: res.data
+            })
+        }).catch((err) => {
+            console.log('I\'m sorry, Error......')
+        })
+    }
+    render() {
+        const { result } = this.state
+
+        return (
+            <Content style={{ margin: '0 16px' }}>
                 <h1>Hello world!</h1>
                 <form>
-                    <input type="number" defaultValue={0} ref={(el) => this.elements.firstValue = el}/>
-                    <input type="number" defaultValue={0} ref={(el) => this.elements.secondValue = el}/>
+                    <input type="number" defaultValue={0} ref={(el) => this.elements.firstValue = el} />
+                    <input type="number" defaultValue={0} ref={(el) => this.elements.secondValue = el} />
                     <button type="button" className="plus" onClick={this.onPlus}>+</button>
                     <button type="button" className="subtract" onClick={this.onSubtract}>-</button>
                     <button type="button" className="multiple" onClick={this.onMultiple}>*</button>
@@ -34,7 +49,13 @@ class Main extends Component {
                     <p className='result'>{result}</p>
                     <h1> redux :{this.props.state.mathReducer.result}</h1>
                 </form>
-
+                <ul>
+                    {this.state.data.map(data =>
+                        <li key={data.id.toString()}>
+                            {data.name}
+                        </li>
+                    )}
+                </ul>
             </Content>
         )
     }
@@ -102,7 +123,7 @@ class Main extends Component {
 
 }
 const mapStatetoProps = (state) => {
-    return {state};
+    return { state };
 }
 const mapDispatchtoProps = (dispatch) => bindActionCreators({
     _setValue
