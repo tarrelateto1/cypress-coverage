@@ -1,11 +1,12 @@
-import React, { Component } from "react"
-import { Layout } from "antd";
-import { bindActionCreators } from "redux";
-import { _setValue } from "../../../stores/actions/add";
-import { connect } from "react-redux";
+import React, {Component} from "react"
+import {Button, Col, Input, Layout, Row} from "antd";
+import {bindActionCreators} from "redux";
+import {_setValue} from "../../../stores/actions/add";
+import {connect} from "react-redux";
 import api from '../../../api'
 
 const { Content } = Layout;
+const { Search } = Input;
 
 class Main extends Component {
 
@@ -49,16 +50,37 @@ class Main extends Component {
                     <p className='result'>{result}</p>
                     <h1> redux :{this.props.state.mathReducer.result}</h1>
                 </form>
-                <ul>
+<Row justify="start">
+    <Col span={6}>
+        <Search
+            placeholder="input search text"
+            enterButton="Add User"
+            size="large"
+            onSearch={value => this.postData(value)}
+        />
+    </Col>
+</Row>
+
+                <ul >
                     {this.state.data.map(data =>
-                        <li key={data.id.toString()}>
+                        <li key={data.id.toString()} style={{margin:'10px'}}>
                             {data.name}
+                            <Button type="primary"  style={{margin:'0 10px'}}>
+                            Update
+                        </Button>
+                            <Button type="danger"  style={{margin:'0 10px'}}>
+                                Delete
+                            </Button>
                         </li>
                     )}
                 </ul>
             </Content>
         )
     }
+    postData(value){
+        console.log(value)
+    }
+
     onPlus() {
         const firstValue = parseInt(this.elements.firstValue.value, 10)
         const secondValue = parseInt(this.elements.secondValue.value, 10)
