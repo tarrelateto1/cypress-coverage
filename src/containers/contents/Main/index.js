@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import {Button, Col, Input, Layout, Row} from "antd";
+import {Button, Col, Input, Layout, Row,Modal} from "antd";
 import {bindActionCreators} from "redux";
 import {_setValue} from "../../../stores/actions/add";
 import {connect} from "react-redux";
@@ -9,6 +9,27 @@ const { Content } = Layout;
 const { Search } = Input;
 
 class Main extends Component {
+    state = { visible: false };
+
+    showModal = () => {
+        this.setState({
+            visible: true,
+        });
+    };
+
+    handleOk = e => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    };
+
+    handleCancel = e => {
+        console.log(e);
+        this.setState({
+            visible: false,
+        });
+    };
 
     constructor(props) {
         super(props)
@@ -22,6 +43,7 @@ class Main extends Component {
         this.onMultiple = this.onMultiple.bind(this);
         this.onDivide = this.onDivide.bind(this);
     }
+
     componentDidMount() {
         api.getData().then(res => {
             this.setState({
@@ -65,7 +87,7 @@ class Main extends Component {
                     {this.state.data.map(data =>
                         <li key={data.id.toString()} style={{margin:'10px'}}>
                             {data.name}
-                            <Button type="primary"  style={{margin:'0 10px'}}>
+                            <Button type="primary"  style={{margin:'0 10px'}} onClick={this.showModal}>
                             Update
                         </Button>
                             <Button type="danger"  style={{margin:'0 10px'}}>
@@ -74,6 +96,16 @@ class Main extends Component {
                         </li>
                     )}
                 </ul>
+                <Modal
+                    title="Basic Modal"
+                    visible={this.state.visible}
+                    onOk={this.handleOk}
+                    onCancel={this.handleCancel}
+                >
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                </Modal>
             </Content>
         )
     }

@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96cec03e-39a0-4764-aa3b-2efeb07d5733" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/plugins/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/plugins/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/contents/Main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/contents/Main/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +112,10 @@
       <workItem from="1592990413840" duration="1986000" />
       <workItem from="1593397046419" duration="207000" />
       <workItem from="1593570313884" duration="1430000" />
+      <workItem from="1593588700731" duration="2993000" />
+      <workItem from="1593656416153" duration="1175000" />
+      <workItem from="1593661776086" duration="4133000" />
+      <workItem from="1593683127476" duration="258000" />
     </task>
     <servers />
   </component>
